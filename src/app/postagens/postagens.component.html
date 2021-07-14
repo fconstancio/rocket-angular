@@ -3,7 +3,7 @@
 
     <!-- OVERFLOW -->
     <!-- <div class="row px-5 mt-5"> -->
-    <div class="row pe-5 mt-5">
+    <div class="row ps-5 pe-5 mt-5">
         <div class="col-md-12">
 
             <div class="row d-flex justify-content-center">
@@ -33,9 +33,9 @@
 
     <!-- NOVA POSTAGENS -->
     <div class="row mt-5">
-        <div class="col-md-12">
+        <div class="col-md-10">
             <div class="row ic-menu br-32 d-flex justify-content-center py-3">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <div class="d-flex p-0 align-items-center justify-content-between txt-titulo">
                         <p>Para realizar uma nova postagem...</p>
                         <!-- botão do modal -->
@@ -55,7 +55,7 @@
                     <nav>
                         <div class="nav nav-tabs d-flex justify-content-start largura-abas-postagens mt-3" id="nav-tab"
                             role="tablist">
-                            <button class="nav-link active text-dark fw-bold btn-efeito" id="nav-todasPostagens-tab"
+                            <button class="nav-link active text-dark fw-bold btn-efeito me-2" id="nav-todasPostagens-tab"
                                 data-bs-toggle="tab" data-bs-target="#nav-todasPostagens" type="button" role="tab"
                                 aria-controls="nav-todasPostagens" aria-selected="true">Todas as Postagens</button>
 
@@ -109,14 +109,14 @@
                                     <p class="text-center fs-1 fw-bold">{{item.titulo}}</p>
 
                                     <!-- IMAGE -->
-                                    <div *ngIf="!(item.imagem == null || item.imagem =='')" class="mt-1">
-                                        <img src="{{ item.imagem }}" width="100%" height="100%" alt="" />
+                                    <div *ngIf="!(item.imagem == null || item.imagem =='')" class="text-center mt-3 mb-3">
+                                        <img src="{{ item.imagem }}" style="max-width: 1000px;" alt="" />
                                     </div>
                                     <!-- /IMAGE -->
 
                                     <!-- VIDEO -->
                                     <div *ngIf="!(item.videoSeguro.changingThisBreaksApplicationSecurity == null ||item.videoSeguro.changingThisBreaksApplicationSecurity == '')"
-                                        class="container my-1">
+                                        class="container my-1 mt-3 mb-3">
                                         <div class="row config-video">
                                             <iframe width="560" height="315" [src]="item.videoSeguro"
                                                 title="YouTube video player" frameborder="0"
@@ -228,8 +228,7 @@
                                 </div>
                                 <div class="mb-2">
                                     <p class="text-center fs-1 fw-bold">{{item.titulo}}</p>
-                                    <p class="fs-3">{{item.conteudo}}</p>
-
+                                    
                                     <!-- IMAGE -->
                                     <div *ngIf="!(item.imagem == null || item.imagem =='')" class="mt-1">
                                         <img src="{{item.imagem}}" width="100%" height="100%" alt="" />
@@ -238,15 +237,16 @@
                                     
                                     <!-- VIDEO -->
                                     <div *ngIf="!(item.video == null ||item.video == '')"
-                                        class="container my-1">
-                                        <div class="row config-video">
-                                            <iframe width="560" height="315" [src]="videoSec(item.video)"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen></iframe>
-                                        </div>
+                                    class="container my-1">
+                                    <div class="row config-video">
+                                        <iframe width="560" height="315" [src]="videoSec(item.video)"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                     </div>
                                     <!--/ VIDEO -->
+                                    <p class="fs-3">{{item.conteudo}}</p>
+                                </div>
 
 
 

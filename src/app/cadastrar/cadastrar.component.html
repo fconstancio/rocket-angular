@@ -1,5 +1,5 @@
-<div class="container-fluid" id="img-bg">
-    <div class="row d-flex align-items-center">
+<div class="container-fluid">
+    <div class="row d-flex align-items-center" id="img-bg">
         <div class="col-md-12">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-4 bg-light p-5 br-32">
@@ -52,8 +52,7 @@
                     <div class="d-flex justify-content-center p-3 mt-3">
                         <button class="btn btn-success btn-efeito-cad fs-5 me-5" (click)='cadastrar()'
                             type="submit">Cadastrar</button>
-                        <button class="btn btn-danger btn-efeito-canc fs-5 ms-5" type="submit"
-                            routerLink="/sobrenos">Cancelar</button>
+                        <button class="btn btn-danger btn-efeito-canc fs-5 ms-5" (click)='cancel()'>Cancelar</button>
                     </div>
                 </div>
             </div>
